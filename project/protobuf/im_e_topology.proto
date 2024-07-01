@@ -1,0 +1,83 @@
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
+// An electrical connection point (AC or DC) to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.
+message ACDCTerminal
+ {
+  string description = 0
+  string energyIdentCodeEic = 0
+  string mRid = 0
+  string shortName = 0
+ repeated  name names = 0
+ }
+// Defines a system base voltage which is referenced.
+message BaseVoltage
+ {
+ repeated  topologicalNode topologicalNode = 0
+ }
+// Connectivity nodes are points where terminals of AC conducting equipment are connected together with zero impedance.
+message ConnectivityNode
+ {
+  topologicalNode topologicalNode = 0
+ }
+// A base class for all objects that may contain connectivity nodes or topological nodes.
+message ConnectivityNodeContainer
+ {
+ repeated  topologicalNode topologicalNode = 0
+ }
+// This is a root class to provide common identification for all classes needing identification and naming attributes.
+message IdentifiedObject
+ {
+  string description = 0
+  string energyIdentCodeEic = 0
+  string mRid = 0
+  string shortName = 0
+ repeated  name names = 0
+ }
+// The Name class provides the means to define any number of human readable  names for an object. A name is <b>not</b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.
+// 
+message Name
+ {
+  nameType nameType = 0
+  identifiedObject identifiedObject = 0
+ }
+// Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:
+// The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.
+// 
+message NameType
+ {
+  string description = 0
+  nameTypeAuthority nameTypeAuthority = 0
+ repeated  name names = 0
+ }
+// Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.
+// 
+message NameTypeAuthority
+ {
+  string description = 0
+ repeated  nameType nameTypes = 0
+ }
+// An AC electrical connection point to a piece of conducting equipment. Terminals are connected at physical connection points called connectivity nodes.
+message Terminal
+ {
+  string description = 0
+  string energyIdentCodeEic = 0
+  string mRid = 0
+  string shortName = 0
+ repeated  name names = 0
+  topologicalNode topologicalNode = 0
+ }
+// For a detailed substation model a topological node is a set of connectivity nodes that, in the current network state, are connected together through any type of closed switches, including  jumpers. Topological nodes change as the current network state changes (i.e., switches, breakers, etc. change state).
+// For a planning model, switch statuses are not used to form topological nodes. Instead they are manually created or deleted in a model builder tool. Topological nodes maintained this way are also called "busses".
+message TopologicalNode
+ {
+  string description = 0
+  string energyIdentCodeEic = 0
+  string mRid = 0
+  string shortName = 0
+ repeated  name names = 0
+  baseVoltage baseVoltage = 0
+ repeated  connectivityNode connectivityNodes = 0
+  connectivityNodeContainer connectivityNodeContainer = 0
+ repeated  terminal terminal = 0
+ }

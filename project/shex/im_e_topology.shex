@@ -1,0 +1,134 @@
+# metamodel_version: 1.7.0
+BASE <http://data.netbeheernederland.nl/im-e-topology/def#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX cim: <https://cim.ucaiug.io/ns#>
+PREFIX eu: <http://iec.ch/TC57/CIM100-European#>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<ACDCTerminal>  (
+    CLOSED {
+       (  $<ACDCTerminal_tes> (  &<IdentifiedObject_tes> ;
+             rdf:type [ cim:IdentifiedObject ] ?
+          ) ;
+          rdf:type [ cim:ACDCTerminal ] ?
+       )
+    } OR @<Terminal>
+)
+
+<BaseVoltage> CLOSED {
+    (  $<BaseVoltage_tes> cim:BaseVoltage.TopologicalNode @<TopologicalNode> * ;
+       rdf:type [ cim:BaseVoltage ] ?
+    )
+}
+
+<ConnectivityNode> CLOSED {
+    (  $<ConnectivityNode_tes> cim:ConnectivityNode.TopologicalNode @<TopologicalNode> ;
+       rdf:type [ cim:ConnectivityNode ] ?
+    )
+}
+
+<ConnectivityNodeContainer> CLOSED {
+    (  $<ConnectivityNodeContainer_tes> cim:ConnectivityNodeContainer.TopologicalNode @<TopologicalNode> * ;
+       rdf:type [ cim:ConnectivityNodeContainer ] ?
+    )
+}
+
+<IdentifiedObject>  (
+    CLOSED {
+       (  $<IdentifiedObject_tes> (  cim:IdentifiedObject.description @linkml:String ? ;
+             eu:IdentifiedObject.energyIdentCodeEic @linkml:String ? ;
+             cim:IdentifiedObject.mRID @linkml:String ;
+             eu:IdentifiedObject.shortName @linkml:String ? ;
+             cim:IdentifiedObject.Names @<Name> *
+          ) ;
+          rdf:type [ cim:IdentifiedObject ] ?
+       )
+    } OR @<ACDCTerminal> OR @<TopologicalNode>
+)
+
+<Name> CLOSED {
+    (  $<Name_tes> (  cim:Name.NameType @<NameType> ;
+          cim:Name.IdentifiedObject @<IdentifiedObject>
+       ) ;
+       rdf:type [ cim:Name ] ?
+    )
+}
+
+<NameType> CLOSED {
+    (  $<NameType_tes> (  cim:NameType.description @linkml:String ? ;
+          cim:NameType.NameTypeAuthority @<NameTypeAuthority> ? ;
+          cim:NameType.Names @<Name> *
+       ) ;
+       rdf:type [ cim:NameType ] ?
+    )
+}
+
+<NameTypeAuthority> CLOSED {
+    (  $<NameTypeAuthority_tes> (  cim:NameTypeAuthority.description @linkml:String ? ;
+          cim:NameTypeAuthority.NameTypes @<NameType> *
+       ) ;
+       rdf:type [ cim:NameTypeAuthority ] ?
+    )
+}
+
+<Terminal> CLOSED {
+    (  $<Terminal_tes> (  &<ACDCTerminal_tes> ;
+          rdf:type [ cim:ACDCTerminal ] ? ;
+          cim:Terminal.TopologicalNode @<TopologicalNode> ?
+       ) ;
+       rdf:type [ cim:Terminal ] ?
+    )
+}
+
+<TopologicalNode> CLOSED {
+    (  $<TopologicalNode_tes> (  &<IdentifiedObject_tes> ;
+          rdf:type [ cim:IdentifiedObject ] ? ;
+          cim:TopologicalNode.BaseVoltage @<BaseVoltage> ;
+          cim:TopologicalNode.ConnectivityNodes @<ConnectivityNode> * ;
+          cim:TopologicalNode.ConnectivityNodeContainer @<ConnectivityNodeContainer> ;
+          cim:TopologicalNode.Terminal @<Terminal> +
+       ) ;
+       rdf:type [ cim:TopologicalNode ] ?
+    )
+}
+
