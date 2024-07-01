@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "im_e_topology"
-version = "0.1.0"
+version = "1.0.0"
 description = "Informatiemodel voor het NBNLES Topology Profile."
 authors = ["Ritger Teunissen <ritger.teunissen@alliander.com>"]
 license = "Apache Software License 2.0"
