@@ -11,12 +11,14 @@
 <title>Class: NameType - im-e-topology</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../assets/style.css" rel="stylesheet"/>
 <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 </head>
-<body data-md-color-accent="None" data-md-color-primary="None" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="blue" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
@@ -30,7 +32,7 @@
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="im-e-topology" class="md-header__button md-logo" data-md-component="logo" href=".." title="im-e-topology">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<img alt="logo" src="../assets/logo.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -102,7 +104,7 @@
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
 <a aria-label="im-e-topology" class="md-nav__button md-logo" data-md-component="logo" href=".." title="im-e-topology">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+<img alt="logo" src="../assets/logo.svg"/>
 </a>
     im-e-topology
   </label>
@@ -124,7 +126,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../about/">
-        About
+        Conceptual Model
       </a>
 </li>
 </ul>
@@ -206,7 +208,7 @@ _</p>
 _</p>
 <p>__</p>
 <p>URI: <a href="https://cim.ucaiug.io/ns#NameType">cim:NameType</a></p>
-<div class="mermaid"> classDiagram
+<pre class="mermaid"><code> classDiagram
     class NameType
     click NameType href "../NameType"
       NameType : description
@@ -229,8 +231,7 @@ _</p>
     click Name href "../Name"
 
 
-
-</div>
+</code></pre>
 <!-- no inheritance hierarchy -->
 <h2 id="slots">Slots</h2>
 <table>
@@ -316,115 +317,115 @@ _</p>
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: NameType
-description: "Type of name. Possible values for attribute 'name' are implementation\
-  \ dependent but standard profiles may specify types. An enterprise may have multiple\
-  \ IT systems each having its own local name for the same object, e.g. a planning\
-  \ system may have different names from an EMS. An object may also have different\
-  \ names within the same IT system, e.g. localName as defined in CIM version 14.\
-  \ The definition from CIM14 is:\r\nThe localName is a human readable name of the\
-  \ object. It is a free text name local to a node in a naming hierarchy similar to\
-  \ a file directory structure. A power system related naming hierarchy may be: Substation,\
-  \ VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have\
-  \ names that typically are unique among them.\r\n"
-from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-attributes:
-  description:
-    name: description
-    description: "Description of the name type.\r\n"
-    from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-    slot_uri: cim:NameType.description
-    multivalued: false
-    domain_of:
-    - IdentifiedObject
-    - NameType
-    - NameTypeAuthority
-    range: string
-    required: false
-  name_type_authority:
-    name: name_type_authority
-    description: Authority responsible for managing names of this type.
-    from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-    rank: 1000
-    slot_uri: cim:NameType.NameTypeAuthority
-    multivalued: false
-    domain_of:
-    - NameType
-    range: NameTypeAuthority
-    required: false
-  names:
-    name: names
-    description: All names of this type.
-    from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-    slot_uri: cim:NameType.Names
-    multivalued: true
-    domain_of:
-    - IdentifiedObject
-    - NameType
-    range: Name
-    required: false
-class_uri: cim:NameType
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">Possible</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">'name'</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">implementation\</span>
+<span class="w">  </span><span class="s">\ dependent</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">standard</span><span class="nv"> </span><span class="s">profiles</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">types.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">multiple\</span>
+<span class="w">  </span><span class="s">\ IT</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">having</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">own</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">planning\</span>
+<span class="w">  </span><span class="s">\ system</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">EMS.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">different\</span>
+<span class="w">  </span><span class="s">\ names</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">IT</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">localName</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">CIM</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">14.\</span>
+<span class="w">  </span><span class="s">\ The</span><span class="nv"> </span><span class="s">definition</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">CIM14</span><span class="nv"> </span><span class="s">is:\r\nThe</span><span class="nv"> </span><span class="s">localName</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">human</span><span class="nv"> </span><span class="s">readable</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the\</span>
+<span class="w">  </span><span class="s">\ object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">free</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">node</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">naming</span><span class="nv"> </span><span class="s">hierarchy</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">to\</span>
+<span class="w">  </span><span class="s">\ a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">directory</span><span class="nv"> </span><span class="s">structure.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">power</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">naming</span><span class="nv"> </span><span class="s">hierarchy</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be:</span><span class="nv"> </span><span class="s">Substation,\</span>
+<span class="w">  </span><span class="s">\ VoltageLevel,</span><span class="nv"> </span><span class="s">Equipment</span><span class="nv"> </span><span class="s">etc.</span><span class="nv"> </span><span class="s">Children</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">hierarchy</span><span class="nv"> </span><span class="s">have\</span>
+<span class="w">  </span><span class="s">\ names</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">among</span><span class="nv"> </span><span class="s">them.\r\n"</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">type.\r\n"</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType.description</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameTypeAuthority</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">name_type_authority</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_type_authority</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Authority responsible for managing names of this type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType.NameTypeAuthority</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameTypeAuthority</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">names</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">names</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All names of this type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType.Names</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType</span>
+</code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: NameType
-description: "Type of name. Possible values for attribute 'name' are implementation\
-  \ dependent but standard profiles may specify types. An enterprise may have multiple\
-  \ IT systems each having its own local name for the same object, e.g. a planning\
-  \ system may have different names from an EMS. An object may also have different\
-  \ names within the same IT system, e.g. localName as defined in CIM version 14.\
-  \ The definition from CIM14 is:\r\nThe localName is a human readable name of the\
-  \ object. It is a free text name local to a node in a naming hierarchy similar to\
-  \ a file directory structure. A power system related naming hierarchy may be: Substation,\
-  \ VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have\
-  \ names that typically are unique among them.\r\n"
-from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-attributes:
-  description:
-    name: description
-    description: "Description of the name type.\r\n"
-    from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-    slot_uri: cim:NameType.description
-    multivalued: false
-    alias: description
-    owner: NameType
-    domain_of:
-    - IdentifiedObject
-    - NameType
-    - NameTypeAuthority
-    range: string
-    required: false
-  name_type_authority:
-    name: name_type_authority
-    description: Authority responsible for managing names of this type.
-    from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-    rank: 1000
-    slot_uri: cim:NameType.NameTypeAuthority
-    multivalued: false
-    alias: name_type_authority
-    owner: NameType
-    domain_of:
-    - NameType
-    range: NameTypeAuthority
-    required: false
-  names:
-    name: names
-    description: All names of this type.
-    from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-    slot_uri: cim:NameType.Names
-    multivalued: true
-    alias: names
-    owner: NameType
-    domain_of:
-    - IdentifiedObject
-    - NameType
-    range: Name
-    required: false
-class_uri: cim:NameType
-
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Type</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">name.</span><span class="nv"> </span><span class="s">Possible</span><span class="nv"> </span><span class="s">values</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">attribute</span><span class="nv"> </span><span class="s">'name'</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">implementation\</span>
+<span class="w">  </span><span class="s">\ dependent</span><span class="nv"> </span><span class="s">but</span><span class="nv"> </span><span class="s">standard</span><span class="nv"> </span><span class="s">profiles</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">specify</span><span class="nv"> </span><span class="s">types.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">enterprise</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">multiple\</span>
+<span class="w">  </span><span class="s">\ IT</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">each</span><span class="nv"> </span><span class="s">having</span><span class="nv"> </span><span class="s">its</span><span class="nv"> </span><span class="s">own</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">object,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">planning\</span>
+<span class="w">  </span><span class="s">\ system</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">different</span><span class="nv"> </span><span class="s">names</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">EMS.</span><span class="nv"> </span><span class="s">An</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">also</span><span class="nv"> </span><span class="s">have</span><span class="nv"> </span><span class="s">different\</span>
+<span class="w">  </span><span class="s">\ names</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">IT</span><span class="nv"> </span><span class="s">system,</span><span class="nv"> </span><span class="s">e.g.</span><span class="nv"> </span><span class="s">localName</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">defined</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">CIM</span><span class="nv"> </span><span class="s">version</span><span class="nv"> </span><span class="s">14.\</span>
+<span class="w">  </span><span class="s">\ The</span><span class="nv"> </span><span class="s">definition</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">CIM14</span><span class="nv"> </span><span class="s">is:\r\nThe</span><span class="nv"> </span><span class="s">localName</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">human</span><span class="nv"> </span><span class="s">readable</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the\</span>
+<span class="w">  </span><span class="s">\ object.</span><span class="nv"> </span><span class="s">It</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">free</span><span class="nv"> </span><span class="s">text</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">local</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">node</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">naming</span><span class="nv"> </span><span class="s">hierarchy</span><span class="nv"> </span><span class="s">similar</span><span class="nv"> </span><span class="s">to\</span>
+<span class="w">  </span><span class="s">\ a</span><span class="nv"> </span><span class="s">file</span><span class="nv"> </span><span class="s">directory</span><span class="nv"> </span><span class="s">structure.</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">power</span><span class="nv"> </span><span class="s">system</span><span class="nv"> </span><span class="s">related</span><span class="nv"> </span><span class="s">naming</span><span class="nv"> </span><span class="s">hierarchy</span><span class="nv"> </span><span class="s">may</span><span class="nv"> </span><span class="s">be:</span><span class="nv"> </span><span class="s">Substation,\</span>
+<span class="w">  </span><span class="s">\ VoltageLevel,</span><span class="nv"> </span><span class="s">Equipment</span><span class="nv"> </span><span class="s">etc.</span><span class="nv"> </span><span class="s">Children</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">same</span><span class="nv"> </span><span class="s">parent</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">such</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">hierarchy</span><span class="nv"> </span><span class="s">have\</span>
+<span class="w">  </span><span class="s">\ names</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">typically</span><span class="nv"> </span><span class="s">are</span><span class="nv"> </span><span class="s">unique</span><span class="nv"> </span><span class="s">among</span><span class="nv"> </span><span class="s">them.\r\n"</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">attributes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">"Description</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">name</span><span class="nv"> </span><span class="s">type.\r\n"</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType.description</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameTypeAuthority</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">name_type_authority</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_type_authority</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Authority responsible for managing names of this type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType.NameTypeAuthority</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name_type_authority</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameTypeAuthority</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">names</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">names</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">All names of this type.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType.Names</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">names</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NameType</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Name</span>
+<span class="w">    </span><span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:NameType</span>
+</code></pre></div>
 </details>
 </article>
 </div>
@@ -451,7 +452,5 @@ class_uri: cim:NameType
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
-<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
-mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
-mermaid.initialize({});</script></body>
+</body>
 </html>

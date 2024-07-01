@@ -24,6 +24,10 @@
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
         
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
       
       
 
@@ -38,6 +42,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../assets/style.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -54,7 +60,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="blue">
   
     
     
@@ -80,8 +86,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="im-e-topology" class="md-header__button md-logo" aria-label="im-e-topology" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -178,8 +183,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="im-e-topology" class="md-nav__button md-logo" aria-label="im-e-topology" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logo.svg" alt="logo">
 
     </a>
     im-e-topology
@@ -223,7 +227,7 @@
   
     <li class="md-nav__item">
       <a href="../about/" class="md-nav__link">
-        About
+        Conceptual Model
       </a>
     </li>
   
@@ -333,13 +337,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ACDCTerminal/">ACDCTerminal</a></td>
-<td>An electrical connection point (AC or DC) to a piece of conducting equipment</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Terminal/">Terminal</a></td>
-<td>An AC electrical connection point to a piece of conducting equipment</td>
+<td><a href="../TopologicalNode/">TopologicalNode</a></td>
+<td>For a detailed substation model a topological node is a set of connectivity n...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -348,8 +347,13 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../TopologicalNode/">TopologicalNode</a></td>
-<td>For a detailed substation model a topological node is a set of connectivity n...</td>
+<td><a href="../Terminal/">Terminal</a></td>
+<td>An AC electrical connection point to a piece of conducting equipment</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ACDCTerminal/">ACDCTerminal</a></td>
+<td>An electrical connection point (AC or DC) to a piece of conducting equipment</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -370,27 +374,24 @@
 </ul>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m_rid</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Master</span><span class="nv"> </span><span class="s">resource</span><span class="nv"> </span><span class="s">identifier</span><span class="nv"> </span><span class="s">issued</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">model</span><span class="nv"> </span><span class="s">authority.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">mRID</span><span class="nv"> </span><span class="s">is</span>
+<span class="w">  </span><span class="s">unique</span><span class="nv"> </span><span class="s">within</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">exchange</span><span class="nv"> </span><span class="s">context.</span><span class="nv"> </span><span class="s">Global</span><span class="nv"> </span><span class="s">uniqueness</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">easily</span><span class="nv"> </span><span class="s">achieved</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">using</span>
+<span class="w">  </span><span class="s">a</span><span class="nv"> </span><span class="s">UUID,</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">specified</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">RFC</span><span class="nv"> </span><span class="s">4122,</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">mRID.</span><span class="nv"> </span><span class="s">The</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">UUID</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">strongly</span><span class="nv"> </span><span class="s">recommended.</span>
 
-<pre><code class="language-yaml">name: m_rid
-description: 'Master resource identifier issued by a model authority. The mRID is
-  unique within an exchange context. Global uniqueness is easily achieved by using
-  a UUID, as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.
-
-  For CIMXML data files in RDF syntax conforming to IEC 61970-552, the mRID is mapped
-  to rdf:ID or rdf:about attributes that identify CIM object elements.'
-from_schema: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
-rank: 1000
-slot_uri: cim:IdentifiedObject.mRID
-multivalued: false
-alias: m_rid
-owner: IdentifiedObject
-domain_of:
-- IdentifiedObject
-range: string
-required: true
-
-</code></pre>
-
+<span class="w">  </span><span class="s">For</span><span class="nv"> </span><span class="s">CIMXML</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">files</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">RDF</span><span class="nv"> </span><span class="s">syntax</span><span class="nv"> </span><span class="s">conforming</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">IEC</span><span class="nv"> </span><span class="s">61970-552,</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">mRID</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">mapped</span>
+<span class="w">  </span><span class="s">to</span><span class="nv"> </span><span class="s">rdf:ID</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">rdf:about</span><span class="nv"> </span><span class="s">attributes</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">identify</span><span class="nv"> </span><span class="s">CIM</span><span class="nv"> </span><span class="s">object</span><span class="nv"> </span><span class="s">elements.&#39;</span>
+<span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://data.netbeheernederland.nl/im-e-topology/version#1.0.0</span>
+<span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cim:IdentifiedObject.mRID</span>
+<span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">m_rid</span>
+<span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="nt">domain_of</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IdentifiedObject</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
 </details>
 
 
