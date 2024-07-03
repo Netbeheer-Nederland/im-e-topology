@@ -9,6 +9,7 @@ prefixes:
   github: https://github.com/
   cim: https://cim.ucaiug.io/ns#
   eu: http://iec.ch/TC57/CIM100-European#
+  nl: http://iec.ch/TC57/CIM100-Netherlands#
   this: http://data.netbeheernederland.nl/im-e-topology/def#
 default_curi_maps:
 - semweb_context
@@ -123,6 +124,15 @@ classes:
           identification Code). The length of the string is 16 characters as defined
           by the EIC code. For details on EIC scheme please refer to ENTSO-E web site.
         slot_uri: eu:IdentifiedObject.energyIdentCodeEic
+        multivalued: false
+        range: string
+        required: false
+      european_article_number_ean:
+        description: The attribute is used for an exchange of the EAN code (European
+          Article Number). The length of the string is 16 characters as defined by
+          the EAN code. For details on EAN scheme please refer to the [Codebesluit
+          toekenning EAN-codes elektriciteit](https://www.acm.nl/nl/publicaties/codebesluit-toekenning-ean-codes-elektriciteit).
+        slot_uri: nl:IdentifiedObject.europeanArticleNumberEAN
         multivalued: false
         range: string
         required: false
