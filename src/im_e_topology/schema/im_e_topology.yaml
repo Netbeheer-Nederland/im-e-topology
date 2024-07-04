@@ -1,5 +1,46 @@
 name: TopologyProfile
-description: This vocabulary describes the topology profile from NBNLES.
+description: |-
+  This vocabulary describes the topology profile from NBNLES.
+
+  ```mermaid
+  classDiagram
+  direction RL
+
+  class TopologicalNode {
+      BaseVoltage base_voltage
+      ConnectivityNode connectivity_nodes
+      ConnectivityNodeContainer connectivity_node_container
+      Terminal terminal
+      string description
+      string energy_ident_code_eic
+      string european_article_number_ean
+      string m_rid
+      string short_name
+      Name names
+  }
+  class ConnectivityNode {
+      TopologicalNode topological_node
+  }
+  class ConnectivityNodeContainer {
+      TopologicalNode topological_node
+  }
+  class Terminal {
+      TopologicalNode topological_node
+      string description
+      string energy_ident_code_eic
+      string european_article_number_ean
+      string m_rid
+      string short_name
+      Name names
+  }
+  class BaseVoltage {
+      TopologicalNode topological_node
+  }
+  TopologicalNode --> BaseVoltage : base_voltage
+  TopologicalNode --> ConnectivityNodeContainer : connectivity_node_container
+  ConnectivityNode --> TopologicalNode : topological_node
+  Terminal --> TopologicalNode : topological_node
+  ```
 title: Topology Vocabulary
 id: http://data.netbeheernederland.nl/im-e-topology/version#1.0.0
 imports:
