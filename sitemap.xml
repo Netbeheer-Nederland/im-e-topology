@@ -2,237 +2,237 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/ACDCTerminal/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/BaseVoltage/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Boolean/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/ConnectivityNode/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/ConnectivityNodeContainer/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Curie/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Date/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/DateOrDatetime/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Datetime/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Decimal/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Double/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Float/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/IdentifiedObject/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Integer/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Jsonpath/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Jsonpointer/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Name/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/NameType/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/NameTypeAuthority/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Ncname/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Nodeidentifier/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Objectidentifier/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Sparqlpath/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/String/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Terminal/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Time/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/TopologicalNode/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/TopologyProfile/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Uri/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/Uriorcurie/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/about/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/base_voltage/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/connectivity_node_container/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/connectivity_nodes/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/description/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/energy_ident_code_eic/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/european_article_number_ean/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/identified_object/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/m_rid/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/name_type/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/name_type_authority/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/name_types/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/names/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/short_name/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/terminal/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://Netbeheer Nederland.github.io/im-e-topology/topological_node/</loc>
-         <lastmod>2024-07-04</lastmod>
+         <lastmod>2024-07-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
