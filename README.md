@@ -4,7 +4,7 @@ Informatiemodel voor het NBNLES Topology Profile.
 
 ## Website
 
-[https://Netbeheer Nederland.github.io/im-e-topology](https://Netbeheer Nederland.github.io/im-e-topology)
+[https://Netbeheer-Nederland.github.io/im-e-topology](https://Netbeheer-Nederland.github.io/im-e-topology)
 
 ## Repository Structure
 
